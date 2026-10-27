@@ -1,0 +1,181 @@
+{
+  "id": "cross-border-ecommerce",
+  "name": "跨境电商包",
+  "vendor": "官方",
+  "industry": "cross-border-ecommerce",
+  "description": "面向多店铺跨境卖家：店铺经营数据接入、利润核算、广告归因、达人结算、客服自动回复。",
+  "icon": "🛫",
+  "skills": [
+    {
+      "id": "profit-summary",
+      "name": "多店铺利润汇总",
+      "category": "数据分析与财务",
+      "description": "把多店铺订单流、费用流合并为订单级真实利润报告，指出亏损单。",
+      "prompt": "对给定的多店铺经营数据做利润汇总：总览表、最差店铺拆因、异常订单、3 条建议。"
+    },
+    {
+      "id": "fee-allocation",
+      "name": "间接费用摊销",
+      "category": "数据分析与财务",
+      "description": "把投流费、达人佣金、活动费按可解释规则摊到订单。",
+      "prompt": "按给定摊销规则将间接费用分摊到订单并输出明细。"
+    },
+    {
+      "id": "reserve-accrual",
+      "name": "退款准备金计提",
+      "category": "数据分析与财务",
+      "description": "基于历史退款率计提准备金，给出预估真实利润。",
+      "prompt": "根据历史退款率计提准备金并输出预估真实利润与置信区间。"
+    },
+    {
+      "id": "ad-attribution",
+      "name": "广告数据归因",
+      "category": "投放与增长",
+      "description": "曝光/点击/转化四步归因：判断素材、出价还是落地页问题。",
+      "prompt": "对广告数据做归因诊断并生成新素材脚本建议与 AB 测试方案。"
+    },
+    {
+      "id": "influencer-settle",
+      "name": "达人结算单核对",
+      "category": "数据分析与财务",
+      "description": "结算时点对齐成交时点，自动匹配订单，找出跨期差异。",
+      "prompt": "将达人结算单与订单匹配，标出结算时点与成交时点不一致的条目。"
+    },
+    {
+      "id": "cs-reply",
+      "name": "客服自动回复",
+      "category": "客户服务",
+      "description": "连接知识库草拟客服回复，涉及金额动作需人工确认。",
+      "prompt": "根据知识库为客服问题草拟回复，金额相关标注需人工确认。"
+    },
+    {
+      "id": "listing-check",
+      "name": "商品卡上架检查",
+      "category": "运营与选品",
+      "description": "标题、五点描述、图片合规与活动申报检查清单。",
+      "prompt": "输出商品上架前检查清单并逐项核对给定商品卡。"
+    }
+  ],
+  "connectors": [
+    {
+      "id": "store-data",
+      "name": "店铺经营数据",
+      "icon": "🏪",
+      "description": "三店铺订单、费用、退款数据（演示为虚构样本，正式版走店铺开放平台 API 授权）",
+      "status": "connected",
+      "onboarding": "already_available"
+    },
+    {
+      "id": "tiktok-shop",
+      "name": "TikTok Shop",
+      "icon": "🎵",
+      "description": "店铺开放平台 API：订单、结算、活动费用自动同步",
+      "status": "not_connected",
+      "onboarding": "already_available"
+    },
+    {
+      "id": "amazon",
+      "name": "亚马逊 SP-API",
+      "icon": "📦",
+      "description": "订单、广告、结算报告接入",
+      "status": "not_connected",
+      "onboarding": "already_available"
+    },
+    {
+      "id": "alibaba-intl",
+      "name": "阿里国际站",
+      "icon": "🌐",
+      "description": "询盘、订单与商品数据",
+      "status": "not_connected",
+      "onboarding": "already_available"
+    },
+    {
+      "id": "ads-export",
+      "name": "广告平台数据导出",
+      "icon": "📊",
+      "description": "GMV Max / PMax 类投放数据导入",
+      "status": "not_connected",
+      "onboarding": "diy"
+    },
+    {
+      "id": "payment-flow",
+      "name": "收款账户流水",
+      "icon": "🏦",
+      "description": "多币种收款流水导入（CSV/API DIY 配置）",
+      "status": "not_connected",
+      "onboarding": "diy"
+    },
+    {
+      "id": "feishu",
+      "name": "飞书",
+      "icon": "📄",
+      "description": "多维表格、云文档与消息通知",
+      "status": "coming_soon",
+      "onboarding": "already_available"
+    }
+  ],
+  "quickActions": [
+    {
+      "label": "📊 多店铺利润汇总",
+      "prompt": "帮我汇总三个店铺本月的真实利润，指出哪个店在亏钱、亏在哪里"
+    },
+    {
+      "label": "🔍 找出亏损订单",
+      "prompt": "找出本月疑似亏损的订单，逐单拆解亏损原因"
+    },
+    {
+      "label": "💸 达人结算核对",
+      "prompt": "核对本期达人结算单：退款订单的佣金有没有扣回"
+    },
+    {
+      "label": "📈 广告投放归因",
+      "prompt": "分析本周广告数据，判断是素材问题还是出价问题"
+    },
+    {
+      "label": "🎧 客服回复草拟",
+      "prompt": "客户说物流太慢要求退款，帮我草拟一条回复"
+    },
+    {
+      "label": "🧾 新品上架检查",
+      "prompt": "检查拾光饰品 ACC-RING-01 的商品卡能不能上架，顺便算算定价"
+    }
+  ],
+  "scheduleTemplates": [
+    {
+      "icon": "🌅",
+      "name": "晨间经营简报",
+      "description": "汇总昨日三店 GMV、广告花费与异常订单",
+      "category": "日常"
+    },
+    {
+      "icon": "🌙",
+      "name": "日终利润快报",
+      "description": "当日订单级利润预估与费用归集",
+      "category": "日常"
+    },
+    {
+      "icon": "🔍",
+      "name": "竞品价格监控",
+      "description": "跟踪同类目竞品价格与活动变化",
+      "category": "监控"
+    },
+    {
+      "icon": "⚠️",
+      "name": "链接健康度巡检",
+      "description": "评分下降、侵权风险、活跃度异常提醒",
+      "category": "监控"
+    },
+    {
+      "icon": "📝",
+      "name": "周度经营回顾",
+      "description": "每周利润、退款率、ROAS 汇总报告",
+      "category": "报告"
+    },
+    {
+      "icon": "💸",
+      "name": "达人结算核对",
+      "description": "结算单到账自动匹配订单并标记差异",
+      "category": "自动化"
+    }
+  ]
+}

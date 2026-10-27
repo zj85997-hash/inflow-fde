@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-ink antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', 'Noto Sans SC', sans-serif;
+}
+
+.card {
+  @apply rounded-2xl border border-line bg-white shadow-card;
+}
+
+.btn {
+  @apply inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition-colors;
+}
+.btn-primary {
+  @apply btn bg-ink text-white hover:bg-black;
+}
+.btn-brand {
+  @apply btn bg-brand text-white hover:bg-brand-dark;
+}
+.btn-ghost {
+  @apply btn border border-line bg-white text-ink hover:bg-panel;
+}
+
+.chip {
+  @apply inline-flex items-center gap-1 rounded-full border border-line bg-white px-2.5 py-0.5 text-xs text-subtle;
+}
+
+/* markdown 输出样式 */
+.md-body {
+  @apply text-sm leading-6 text-ink;
+}
+.md-body h1, .md-body h2, .md-body h3 {
+  @apply mt-4 mb-2 font-semibold;
+}
+.md-body h1 { @apply text-lg; }
+.md-body h2 { @apply text-base; }
+.md-body p { @apply my-2; }
+.md-body ul, .md-body ol { @apply my-2 pl-5 list-disc; }
+.md-body ol { @apply list-decimal; }
+.md-body table { @apply my-3 w-full border-collapse text-xs; }
+.md-body th, .md-body td { @apply border border-line px-2 py-1.5 text-left; }
+.md-body th { @apply bg-panel font-medium; }
+.md-body code { @apply rounded bg-panel px-1 py-0.5 text-xs; }
+.md-body strong { @apply font-semibold; }
+.md-body blockquote { @apply my-3 rounded-xl border-l-4 border-brand bg-brand-soft/60 px-3 py-2 text-ink; }
+.md-body blockquote p { @apply my-0.5; }
+.md-body table { @apply block overflow-x-auto md:table; }

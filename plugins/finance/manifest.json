@@ -1,0 +1,17 @@
+{
+  "id": "finance",
+  "name": "金融行业包",
+  "vendor": "官方",
+  "industry": "finance",
+  "description": "面向金融机构与企业财资：行情数据接入、风控报表、合规留痕。（占位包，阶段 3 落地）",
+  "icon": "🏛️",
+  "skills": [
+    { "id": "market-brief", "name": "行情晨报", "category": "数据分析与财务", "description": "每日行情与持仓摘要（占位）", "prompt": "" },
+    { "id": "compliance-log", "name": "合规留痕报告", "category": "合规与审计", "description": "操作留痕汇总与审计导出（占位）", "prompt": "" }
+  ],
+  "connectors": [
+    { "id": "wind", "name": "Wind 行情数据", "icon": "📉", "description": "行情与研报数据接入（占位）", "status": "coming_soon", "onboarding": "already_available" }
+  ],
+  "quickActions": [],
+  "scheduleTemplates": []
+}

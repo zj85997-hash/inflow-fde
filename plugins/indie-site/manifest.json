@@ -1,0 +1,16 @@
+{
+  "id": "indie-site",
+  "name": "独立站包",
+  "vendor": "官方",
+  "industry": "indie-site",
+  "description": "面向海外独立站：SEO 工具接入、内容生产、外链监控。（占位包，阶段 3 落地）",
+  "icon": "🌍",
+  "skills": [
+    { "id": "seo-audit", "name": "SEO 体检", "category": "增长与获客", "description": "站点技术 SEO 与关键词覆盖诊断（占位）", "prompt": "" }
+  ],
+  "connectors": [
+    { "id": "semrush", "name": "SEMrush", "icon": "🔎", "description": "关键词与竞品流量数据（占位）", "status": "coming_soon", "onboarding": "already_available" }
+  ],
+  "quickActions": [],
+  "scheduleTemplates": []
+}
