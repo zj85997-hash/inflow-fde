@@ -41,6 +41,13 @@ export default function Sidebar() {
 
   const pending = status?.pendingApprovals ?? 0;
   const demoModel = status?.activeAdapter === 'demo';
+  const model = offline
+    ? { dot: 'bg-red-400', text: '服务端未连接（pnpm dev:server）' }
+    : !status
+      ? { dot: 'bg-line', text: '正在连接…' }
+      : demoModel
+        ? { dot: 'bg-amber-400', text: '离线演示模型 · 数字由代码真算' }
+        : { dot: 'bg-brand', text: 'DeepSeek 已连接' };
 
   return (
     <>
@@ -106,8 +113,8 @@ export default function Sidebar() {
             <span>🚀</span> 企业 Onboard
           </Link>
           <Link href="/settings" className="mt-1 flex items-center gap-2 px-3 py-1 text-[11px] text-subtle hover:text-ink">
-            <span className={`h-1.5 w-1.5 rounded-full ${offline ? 'bg-red-400' : demoModel ? 'bg-amber-400' : 'bg-brand'}`} />
-            {offline ? '服务端未连接（pnpm dev:server）' : demoModel ? '离线演示模型 · 数字由代码真算' : 'DeepSeek 已连接'}
+            <span className={`h-1.5 w-1.5 rounded-full ${model.dot}`} />
+            {model.text}
           </Link>
           <div className="mt-1 flex items-center gap-2 px-3 py-1.5">
             <div className="flex h-7 w-7 items-center justify-center rounded-full bg-brand text-xs font-bold text-white">老</div>
