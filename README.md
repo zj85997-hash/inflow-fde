@@ -22,7 +22,7 @@ FDE（Forward Deployed Engineer，驻场 AI 工程师）的日常，是走进一
 
 ## 来历
 
-原型 AI-FDE-tool（Demo V1）由团队伙伴 A006 开发，包括 monorepo、DeepSeek 网关和成本账本、三层编排，以及 8 个中台页面。经原作者同意，我把它改名为 InFlow FDE，接着做完了下面这些：
+InFlow FDE 由团队原型 AI-FDE-tool（Demo V1）发展而来。原型已经有 monorepo、DeepSeek 网关和成本账本、三层编排，以及 8 个中台页面；我把它改名为 InFlow FDE，接着做完了下面这些：
 
 | 补了什么 | 说明 |
 |---|---|
@@ -137,4 +137,4 @@ pnpm build:demo    # 导出静态演示到 web/out
 
 ## 许可
 
-MIT。原型作者 A006；InFlow FDE 由 [付钟浩（Alex）](https://zj85997-hash.github.io/) 继续开发。
+MIT。作者：[付钟浩（Alex）](https://zj85997-hash.github.io/)。
